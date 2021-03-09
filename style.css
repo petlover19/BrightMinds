@@ -4,9 +4,23 @@ html {
     font-family: 'Manrope', sans-serif;
 }
 
+footer {
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+p {
+    display: inline-block
+}
+
 .catagories {
     width: 307px;
     height: 176px;
+}
+
+.catagories h2 {
+    font-size: 20px;
 }
 
 a {
