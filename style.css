@@ -1,0 +1,29 @@
+html {
+    background-color: #00031F;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+}
+
+.catagories {
+    width: 307px;
+    height: 176px;
+}
+
+a {
+    color: white;
+}
+
+#designCat,
+#createNewCat {
+    background-color: #8000FF;
+    ;
+}
+
+#instructionsCat,
+#presetCat {
+    background-color: #00BCE5;
+}
+
+#aboutCat {
+    background-color: #0032E5;
+}
