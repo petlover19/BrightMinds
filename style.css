@@ -41,3 +41,9 @@ a {
 #aboutCat {
     background-color: #0032E5;
 }
+
+#capCanvas {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+}

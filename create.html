@@ -7,6 +7,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script type="text/javascript" src="Libraries/p5.js"></script>
+    <script type="text/javascript" src="Libraries/p5.dom.js"></script>
+    <script type="text/javascript" src="scripts/LED.js"></script>
+
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
     <link rel="shortcut icon" type="image/jpg" href="assets/BrightMind_fav.png" />
 </head>
@@ -19,6 +24,18 @@
         <img src=" assets/BrightMind_Logo.png " alt="logo ">
     </header>
     <main>
+        <div id=createTop>
+            <p>PREVIEW</p>
+            <button id=undo>un</button>
+            <button id=redo>re</button>
+        </div>
+        <div id=cap>
+            <!-- <canvas id=capCanvas></canvas> -->
+            <script type="text/javascript" src="scripts/canvas.js"></script>
+        </div>
+        <div id=tools>
+
+        </div>
 
     </main>
     <footer>
@@ -34,7 +51,7 @@
             </div>
         </div>
     </footer>
-    <script src="script.js" type="text/javascript">
+    <script src="scripts/script.js" type="text/javascript">
     </script>
 </body>
 
