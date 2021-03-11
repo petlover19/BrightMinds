@@ -17,10 +17,15 @@ p {
 .catagories {
     width: 307px;
     height: 176px;
+    margin-top: 30px;
 }
 
 .catagories h2 {
     font-size: 20px;
+}
+
+.cat {
+    display: inline-block;
 }
 
 a {
@@ -30,7 +35,6 @@ a {
 #designCat,
 #createNewCat {
     background-color: #8000FF;
-    ;
 }
 
 #instructionsCat,
