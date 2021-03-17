@@ -5,62 +5,113 @@ html {
 }
 
 header {
-    margin: auto;
+    display: inline-block;
 }
 
-.brightmindsLogo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 65%;
+body {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 footer {
-    margin: 10px;
-    padding-left: 20px;
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-top:20px;
+    border-top: 1px solid gray;
+    font-size: 12px;
+}
+
+.base {
+    margin: 10px 0px;
+}
+
+.base a{
     padding-right: 20px;
+    /* margin-right: 20px; */
+    margin-right: 20px;
+    border-right: 1px solid darkgray;
 }
 
 h1 {
     display: inline-block;
-    font-size: 20pt;
-	font-weight: bold;
+    font-size: 20px;
+	font-weight: bolder;
 	line-height: 30%;
 }
 
 h2 {
     display: inline-block;
-    font-size: 18pt;
+    font-size: 18px;
 	font-weight: bolder;
 	line-height: 30%;
 }
 
 h3 {
     display: inline-block;
-    font-size: 14pt;
+    font-size: 16px;
 	font-weight: bolder;
-	line-height: auto;
+	line-height: normal;
 }
 
 h4 {
     display: inline-block;
-    font-size: 14pt;
+    font-size: 14px;
 	font-weight: bolder;
-	line-height: auto;
+	line-height: normal;
+}
+
+h5 {
+    display: inline-block;
+    font-size: 14px;
+	font-weight: bolder;
+	line-height: normal;
+    margin: 0;
+}
+
+h6 {
+    display: inline-block;
+    font-size: 14px;
+	font-weight: bold;
+	line-height: normal;
+}
+
+h7 {
+    display: inline-block;
+    font-size: 12px;
+	font-weight: 400;
+	line-height: normal;
 }
 
 p {
     display: inline-block;
-    font-size: 14pt;
+    font-size: 14px;
 	font-weight: 400;
 	line-height: 175%;
+    margin: 0;
 }
 
-p2 {
-    display: inline-block;
-    font-size: 12pt;
-	font-weight: 400;
-	line-height: 175%;
+.about {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding-top: 70px;
+}
+
+.abtMain {
+    display: grid;
+    text-align: center;
+    grid-template-rows: 0.5fr 0.1fr 0.25fr;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.abtMain img {
+    width: 120px;
+}
+
+.abtTxt {
+    padding-left: 20px;
 }
 
 .categories {
@@ -80,6 +131,23 @@ p2 {
 a {
     color: white;
     text-decoration: none;;
+}
+
+#homeButton {
+    width: 32px;
+}
+
+#brightmindsLogo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+#teamTitle {
+    display: block;
+    border-bottom: 1px solid white;
+    text-align: center;
+    padding: 40px 0px 25px 0px;
 }
 
 #designCat,
