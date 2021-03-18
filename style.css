@@ -18,7 +18,7 @@ footer {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 20px;
-    padding-top:20px;
+    padding-top: 20px;
     border-top: 1px solid gray;
     font-size: 12px;
 }
@@ -27,7 +27,7 @@ footer {
     margin: 10px 0px;
 }
 
-.base a{
+.base a {
     padding-right: 20px;
     /* margin-right: 20px; */
     margin-right: 20px;
@@ -37,58 +37,58 @@ footer {
 h1 {
     display: inline-block;
     font-size: 20px;
-	font-weight: bolder;
-	line-height: 30%;
+    font-weight: bolder;
+    line-height: 30%;
 }
 
 h2 {
     display: inline-block;
     font-size: 18px;
-	font-weight: bolder;
-	line-height: 30%;
+    font-weight: bolder;
+    line-height: 30%;
 }
 
 h3 {
     display: inline-block;
     font-size: 16px;
-	font-weight: bolder;
-	line-height: normal;
+    font-weight: bolder;
+    line-height: normal;
 }
 
 h4 {
     display: inline-block;
     font-size: 14px;
-	font-weight: bolder;
-	line-height: normal;
+    font-weight: bolder;
+    line-height: normal;
 }
 
 h5 {
     display: inline-block;
     font-size: 14px;
-	font-weight: bolder;
-	line-height: normal;
+    font-weight: bolder;
+    line-height: normal;
     margin: 0;
 }
 
 h6 {
     display: inline-block;
     font-size: 14px;
-	font-weight: bold;
-	line-height: normal;
+    font-weight: bold;
+    line-height: normal;
 }
 
 h7 {
     display: inline-block;
     font-size: 12px;
-	font-weight: 400;
-	line-height: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 p {
     display: inline-block;
     font-size: 14px;
-	font-weight: 400;
-	line-height: 175%;
+    font-weight: 400;
+    line-height: 175%;
     margin: 0;
 }
 
@@ -130,7 +130,8 @@ p {
 
 a {
     color: white;
-    text-decoration: none;;
+    text-decoration: none;
+    ;
 }
 
 #homeButton {
@@ -164,8 +165,9 @@ a {
     background-color: #0032E5;
 }
 
-#capCanvas {
+
+/* #capCanvas {
     position: absolute;
     top: 150px;
     left: 50px;
-}
+} */
