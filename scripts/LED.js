@@ -10,6 +10,6 @@ class LED {
     }
     draw() {
         fill(this.color.r, this.color.g, this.color.b)
-        ellipse(this.xpos, this.ypos, 25)
+        ellipse(this.xpos, this.ypos, 20)
     }
 }
