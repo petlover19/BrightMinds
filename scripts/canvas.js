@@ -32,24 +32,25 @@ function draw() {
 
     for (let c in leds) {
         for (let l in leds[c]) {
-            if (mouseX > leds[c][l].x - 12 &&
-                mouseX < leds[c][l].x + 12 &&
-                mouseY > leds[c][l].y - 12 &&
-                mouseX < leds[c][l].y + 12) {
-                leds[c][l].color = color
-                console.log("mouseX")
+
+            if (mouseIsPressed) {
+                console.log(leds[c][l].xpos)
+                if (mouseX > leds[c][l].xpos - 12 &&
+                    mouseX < leds[c][l].xpos + 12 &&
+                    mouseY > leds[c][l].ypos - 12 &&
+                    mouseY < leds[c][l].ypos + 12) {
+                    leds[c][l].color = color
+                    console.log("mouseX")
+                }
+
             }
-            // if (mouseIsPressed) {
-
-
-            // }
             leds[c][l].draw()
         }
     }
 }
 
 function mousePressed() {
-
+    // console.log(mouseX)
 }
 window.onresize = windowResized;
 
