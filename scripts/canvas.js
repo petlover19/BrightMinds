@@ -41,11 +41,13 @@ function draw() {
                     mouseX < leds[c][r].xpos + 12 &&
                     mouseY > leds[c][r].ypos - 12 &&
                     mouseY < leds[c][r].ypos + 12) {
+                    let pColor = leds[c][r].color;
                     leds[c][r].color = color
                     let info = {
                         col: c,
                         row: r,
-                        c: color
+                        nc: color,
+                        pc: pColor
                     };
                     set.push(info);
                 }
@@ -71,10 +73,10 @@ function undo() {
             }
         }
     } else {
+        console.log("moves[current] : ", moves[current])
         for (let m of moves[current]) {
             let l = leds[m.col][m.row];
-            l.color = m.c
-            console.log(m)
+            l.color = m.pc;
         }
     }
 }
@@ -84,7 +86,7 @@ function redo() {
     current++;
     for (let m of moves[current]) {
         let l = leds[m.col][m.row];
-        l.color = m.c
+        l.color = m.nc
     }
 }
 
