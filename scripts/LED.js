@@ -9,7 +9,8 @@ class LED {
         }
     }
     draw() {
+        rectMode(CENTER);
         fill(this.color.r, this.color.g, this.color.b)
-        ellipse(this.xpos, this.ypos, 20)
+        rect(this.xpos, this.ypos, 20,20)
     }
 }

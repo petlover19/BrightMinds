@@ -1,14 +1,17 @@
-let desCat = document.querySelector("#designCat");
-let inCat = document.querySelector("#instructionsCat");
-let abtCat = document.querySelector("#aboutCat");
-let creCat = document.querySelector("#createNewCat");
-let preCat = document.querySelector("#presetCat");
+let presets = document.querySelector("#presets");
+let images=["assets/presets/pikachu.png","assets/presets/cOf2021.png","assets/presets/IMadeIt.png","assets/presets/tiger.png","assets/presets/RITGrad.png"]
 
-let catArray = [desCat, inCat, abtCat, creCat, preCat];
-while (true) {
-    for (let i in catArray) {
-        i.onclick = direct;
+window.onload=load;
+function load() {
+    for(let i=0;i<images.length;i++){
+        let preset=document.createElement("div");
+        preset.class="preset";
+        let img=document.createElement("img");
+        img.src=images[i];
+        img
+        let name=document.createElement("p"); 
+        preset.appendChild(img);
+        preset.appendChild(name)
+        presets.appendChild(preset);
     }
 }
-
-function direct() {}
