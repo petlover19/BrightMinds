@@ -28,37 +28,32 @@
             <p>PREVIEW</p>
             <button id="undo">undo</button>
             <button id="redo">redo</button>
+            <button id="rotate">rotate</button>
+            <button id="editSave" class="save">Save</button>
         </div>
         <div id="cap">
             <!-- <canvas id=capCanvas></canvas> -->
-            <script type="text/javascript" src="scripts/canvas.js"></script>
         </div>
         <div id="tools">
             <div id=pen>
                 <label for="penSize">Size:</label>
-                <input type="range" id="penSize" name="vol" min="0" max="50">
+                <label for="small">small</label><br>
+                <input type="radio" id="small" name="penSize" value="1" checked>
+                <label for="medium">medium</label><br>
+                <input type="radio" id="medium" name="penSize" value="5">
+                <label for="large">large</label>
+                <input type="radio" id="large" name="penSize" value="15"> 
+                <label for="large">xlarge</label>
+                <input type="radio" id="xlarge" name="penSize" value="30">
+                
             </div>
             <div id=colorPicker>
                 <p>Color:</p>
             </div>
-
+            <button id=eraser>eraser</button>
         </div>
-
+        <script type="text/javascript" src="scripts/canvas.js"></script>
     </main>
-    <!-- <footer>
-        <img class="brightmindsLogo" img src="assets/BrightMinds_Logo.png" alt="logo">
-        <div class="base">
-            <div>
-                <p>Home</p>
-                <p>About Us</p>
-            </div>
-            <div>
-                <p>Editor</p>
-                <p>Contact</p>
-            </div>
-        </div>
-    </footer> -->
-    <!-- <script src="scripts/script.js" type="text/javascript"> </script>-->
 </body>
 
 </html>

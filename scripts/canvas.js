@@ -1,6 +1,8 @@
 let capCanvas = document.querySelector("#cap");
 let redoBtn = document.querySelector("#redo");
 let undoBtn = document.querySelector("#undo");
+let pSize = document.querySelector("#penSize");
+let rotateBtn = document.querySelector("#rotate");
 
 let color = { r: 255, g: 255, b: 255 };
 let cSize = window.innerWidth
@@ -9,39 +11,55 @@ let leds = [];
 let moves = [];
 let set = [];
 let current = -1;
+let colorPicker;
+let size=0;
+let rotated=false;
 
 
 function setup() {
-    let canvas = createCanvas(955, cSize + 300)
+    let canvas = createCanvas(955, cSize + 100)
     canvas.id = "capCanvas"
     canvas.parent(capCanvas);
+
+    angleMode(DEGREES)
+   
     for (let col = 0; col < 32; col++) {
         let rows = [];
         for (let row = 0; row < 32; row++) {
-            let led = new LED((col * 29) + 35, (row * 29) + 185);
+            let led = new LED((col * 29) + 32, (row * 29) + 85);
             rows.push(led)
         }
         leds.push(rows);
     }
+    colorPicker = createColorPicker('#ed225d');
+  colorPicker.position(15, cSize + 300);
+  console.log("size",size+12)
 }
 
 function draw() {
+    rectMode(CORNER);
     // cSize = window.innerWidth;
     background(23, 35, 67)
     fill(0, 52, 153)
+    // size=pSize.value;
 
     //cap box
-    rect(20, 175, 920, 920, 5)
+    rect(20, 75, 920, 920, 5)
 
     //checks for led 
     for (let c in leds) {
         for (let r in leds[c]) {
             if (mouseIsPressed) {
-                if (mouseX > leds[c][r].xpos - 12 &&
-                    mouseX < leds[c][r].xpos + 12 &&
-                    mouseY > leds[c][r].ypos - 12 &&
-                    mouseY < leds[c][r].ypos + 12) {
+                if (mouseX > leds[c][r].xpos - (12+size) &&
+                    mouseX < leds[c][r].xpos + (12+size) &&
+                    mouseY > leds[c][r].ypos - (12+size) &&
+                    mouseY < leds[c][r].ypos + (12+size)) {
                     let pColor = leds[c][r].color;
+
+                    color.r=colorPicker.color().levels[0];
+                    color.g=colorPicker.color().levels[1];
+                    color.b=colorPicker.color().levels[2];
+
                     leds[c][r].color = color
                     let info = {
                         col: c,
@@ -73,7 +91,6 @@ function undo() {
             }
         }
     } else {
-        console.log("moves[current] : ", moves[current])
         for (let m of moves[current]) {
             let l = leds[m.col][m.row];
             l.color = m.pc;
@@ -99,26 +116,35 @@ function mouseReleased() {
         mouseX < 940 &&
         mouseY > 175 &&
         mouseY < 1095) {
-        console.log("splice:", moves.length - current)
-        console.log("current:", current)
         moves.splice(current, moves.length - 1 - current);
         moves.push(set);
         current = moves.length - 1
-        console.log("moves.length:", moves.length)
-        console.log("current:", current)
     }
 }
 
 function movesBtns() {
-    if (current == moves.length - 1) {
-        redoBtn.style.display = "none";
-    } else if (current == -1) {
-        undoBtn.style.display = "none";
-    } else {
+    if(moves.length!=-1){
+        if (current == moves.length - 1) {
+            redoBtn.style.display = "none";
+        } else if (current == -1) {
+            undoBtn.style.display = "none";
+        }
+    }else {
         undoBtn.style.display = "inline-block";
         redoBtn.style.display = "inline-block";
     }
 }
+
+rotateBtn.onclick=rotater;
+function rotater(){
+    translate(width/2,height/2)
+    if(rotated==true){
+        rotate(45);
+    }else{
+        rotate(-45);
+    }
+}
+
 
 window.onresize = windowResized;
 
