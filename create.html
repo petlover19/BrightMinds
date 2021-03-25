@@ -25,17 +25,19 @@
     </header>
     <main>
         <div id="createTop">
-            <p>PREVIEW</p>
-            <button id="undo">undo</button>
-            <button id="redo">redo</button>
-            <button id="rotate">rotate</button>
-            <button id="editSave" class="save">Save</button>
+            <button id="preview"><p>PREVIEW</p></button>
+            <button id="undo"><img src="assets/icons/undo_icon.png"></button>
+            <button id="redo"><img src="assets/icons/redo_icon.png"></button>
+            <button id="rotate"><img src="assets/icons/rotate_icon.png"></button>
+            <button id="editSave" class="save"><p>SAVE</p></button>
         </div>
+
         <div id="cap">
             <!-- <canvas id=capCanvas></canvas> -->
         </div>
+
         <div id="tools">
-            <div id=pen>
+            <div id="pen">
                 <label for="penSize">Size:</label>
                 <label for="small">small</label><br>
                 <input type="radio" id="small" name="penSize" value="1" checked>
@@ -47,10 +49,10 @@
                 <input type="radio" id="xlarge" name="penSize" value="30">
                 
             </div>
-            <div id=colorPicker>
+            <div id="colorPicker">
                 <p>Color:</p>
             </div>
-            <button id=eraser>eraser</button>
+            <button id="eraser"><img src="assets/icons/eraser_icon.png"></button>
         </div>
         <script type="text/javascript" src="scripts/canvas.js"></script>
     </main>
