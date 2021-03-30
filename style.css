@@ -129,7 +129,6 @@ p {
 
 .categories h2 {
     margin: 0px;
-
 }
 
 a {
@@ -177,21 +176,40 @@ a {
     margin: 20px;
 }
 
-/* Create Design Buttons */
+/* Page Numbers in Premade Design */
+.pageNumbers {
+    display: inline-block;
+    text-align: center;
+  }
+  
+.pageNumbers p {
+    color: white;
+    float: left;
+    padding-right: 3rem;
+    text-decoration: none;
+  }
+
+/* Create Design Buttons above the canvas*/
 #preview {
     border: none;
     background-color: transparent;
     color: white;
 }
 
+#preview p {
+    font-size: 0.813rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
 #undo {
     border: none;
-    background-color: white;
+    background-color: transparent;
 }
 
 #redo {
     border: none;
-    background-color: white;
+    background-color: transparent;
 }
 
 #rotate {
@@ -201,14 +219,87 @@ a {
 
 #editSave {
     border-radius: 0.3rem;
+    border-style: none;
     background-color: #44A5FF;
     color: white;
     padding: 0.5rem 1.2rem;
+}
+    
+#editSave p {
     font-size: 0.813rem;
-    letter-spacing: 0.09rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+/* Colorpicker */
+input[type=color] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border: none;
+    border-radius: 20px;
+    width: 45px;
+    height: 20px;
+    margin-right: 5px;
+    position: relative;
+}
+
+#colorPicker p {
+    font-size: 0.813rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+#penLabel p {
+    font-size: 0.813rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+/* Radiobuttons */
+input[type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    background-color: white;
+    margin-right: 5px;
+    position: relative;
+  }
+
+input[type=radio]:checked {
+    border-width: 4px;
+    border-color: #006ED3;
+    background-color: white;
+}
+
+#medium {
+    width: 20px;
+    height: 20px;
+}
+
+#large {
+    width: 25px;
+    height: 25px;
+}
+
+#large input[type=radio]:checked{
+    width: 25px;
+    height: 25px;
+    background-color: red;
+}
+
+#xlarge {
+    width: 30px;
+    height: 30px;
 }
 
 #eraser {
     border: none;
     background-color: transparent;
+    
 }

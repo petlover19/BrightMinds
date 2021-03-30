@@ -37,25 +37,40 @@
         </div>
 
         <div id="tools">
-            <div id="pen">
-                <label for="penSize">Size:</label>
-                <label for="small">small</label><br>
-                <input type="radio" id="small" name="penSize" value="1" checked>
-                <label for="medium">medium</label><br>
-                <input type="radio" id="medium" name="penSize" value="5">
-                <label for="large">large</label>
-                <input type="radio" id="large" name="penSize" value="15"> 
-                <label for="large">xlarge</label>
-                <input type="radio" id="xlarge" name="penSize" value="30">
-                
-            </div>
             <div id="colorPicker">
-                <p>Color:</p>
+                <p>COLOR</p>
             </div>
-            <button id="eraser"><img src="assets/icons/eraser_icon.png"></button>
+
+            <div id="pen">
+                <div id="penLabel">
+                    <p>BRUSH</p>
+                </div>
+
+                <!-- <label for="small">small</label><br> -->
+                <!-- SMALL -->
+                <input type="radio" id="small" name="penSize" value="1" checked>
+
+                <!-- <label for="medium">medium</label><br> -->
+                <!-- MEDIUM -->
+                <input type="radio" id="medium" name="penSize" value="5">
+
+                <!-- <label for="large">large</label> -->
+                <!-- LARGE -->
+                <input type="radio" id="large" name="penSize" value="15"> 
+                <span class="selectedRadio"></span>
+
+                <!-- <label for="large">xlarge</label> -->
+                <!-- XLARGE -->
+                <input type="radio" id="xlarge" name="penSize" value="30">
+
+                <!-- ERASER -->
+                <button id="eraser"><img src="assets/icons/eraser_icon.png"></button>
+            </div>
         </div>
+
         <script type="text/javascript" src="scripts/canvas.js"></script>
     </main>
+
 </body>
 
 </html>
