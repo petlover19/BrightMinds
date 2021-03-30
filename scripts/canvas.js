@@ -32,7 +32,10 @@ function setup() {
         leds.push(rows);
     }
     colorPicker = createColorPicker('#ed225d');
-  colorPicker.position(15, cSize + 300);
+    let cp=document.querySelector("#colorPicker")
+    colorPicker.parent(cp);
+    cp.id="cp";
+   // colorPicker.position(15, cSize + 300);
   console.log("size",size+12)
 }
 
@@ -41,7 +44,17 @@ function draw() {
     // cSize = window.innerWidth;
     background(23, 35, 67)
     fill(0, 52, 153)
-    // size=pSize.value;
+    
+    
+    // if(rotated==true){
+    //     translate(width/2,height/2)
+    //     rotate(45);
+    // }else if(rotated==false){
+    //     translate(width/2,height/2)
+    //     rotate(-45);
+    // }else{ 
+    //     translate(0,0)
+    // }
 
     //cap box
     rect(20, 75, 920, 920, 5)
@@ -138,11 +151,10 @@ function movesBtns() {
 
 rotateBtn.onclick=rotater;
 function rotater(){
-    translate(width/2,height/2)
     if(rotated==true){
-        rotate(45);
+        rotated=false
     }else{
-        rotate(-45);
+        rotated=true
     }
 }
 
