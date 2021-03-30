@@ -62,7 +62,13 @@ function draw() {
 
                     leds[c][r].color = color
                     leds[c][r].lastC =pColor
-                    set.push(leds[c][r]);
+                    let info = {
+                        col: c,
+                        row: r,
+                        nc: color,
+                        pc: pColor
+                    };
+                    set.push(info);
                 }
             }
             leds[c][r].draw()
