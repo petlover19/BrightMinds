@@ -61,13 +61,8 @@ function draw() {
                     color.b=colorPicker.color().levels[2];
 
                     leds[c][r].color = color
-                    let info = {
-                        col: c,
-                        row: r,
-                        nc: color,
-                        pc: pColor
-                    };
-                    set.push(info);
+                    leds[c][r].lastC =pColor
+                    set.push(leds[c][r]);
                 }
             }
             leds[c][r].draw()
