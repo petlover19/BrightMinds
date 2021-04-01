@@ -7,6 +7,11 @@ class LED {
             g: 133,
             b: 133
         }
+        this.lastC={
+            r: 133,
+            g: 133,
+            b: 133
+        }
     }
     draw() {
         rectMode(CENTER);
