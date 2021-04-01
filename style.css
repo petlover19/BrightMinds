@@ -4,10 +4,6 @@ html {
     font-family: 'Manrope', sans-serif;
 }
 
-header {
-    /* display: inline-block; */
-}
-
 main {
     margin-left: 0.625rem;
     margin-right: 0.625rem;
@@ -236,7 +232,6 @@ button {
 }
 
 #editSave {
-    display: inline-block;
     float: right;
     padding: 1rem 1.8rem;
     margin-right: 1rem;
@@ -314,7 +309,7 @@ input[type=radio] {
     background-color: white;
     margin-right: 2rem;
     position: relative;
-  }
+}
 
 input[type=radio]:checked {
     border-width: 6px;
