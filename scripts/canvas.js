@@ -122,7 +122,8 @@ function redo() {
 }
 
 function mousePressed() {
-    set = []
+    set.length=0;
+    console.log(set)
 }
 
 function mouseReleased() {
