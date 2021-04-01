@@ -5,12 +5,17 @@ html {
 }
 
 header {
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 main {
     margin-left: 0.625rem;
     margin-right: 0.625rem;
+}
+
+.brightmindsLogo {
+    display: inline-block;
+    margin: auto;
 }
 
 footer {
@@ -172,25 +177,83 @@ a {
     left: 50px;
 } */
 
-#createTop {
-    margin: 20px;
-}
 
 /* Page Numbers in Premade Design */
 .pageNumbers {
-    display: inline-block;
+    /* display: inline-block;
+    margin: auto; */
     text-align: center;
+    margin-top: 2rem;
   }
   
 .pageNumbers p {
     color: white;
-    float: left;
-    padding-right: 3rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
     text-decoration: none;
   }
 
+.pageNumbers img {
+    padding-left: 1.5rem;
+}
+
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
 /* Create Design Buttons above the canvas*/
-#preview {
+#createTop {
+    border: none;
+    background-color: transparent;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    
+}
+
+#createTop img {
+    border: none;
+    background-color: transparent;
+    width: 150%;
+}
+
+#undo {
+    padding-right: 1rem;
+}
+
+#redo {
+    padding-right: 1rem;
+}
+
+#rotate {
+    border: none;
+    background-color: transparent;
+    margin-left: 3rem;
+}
+
+#editSave {
+    display: inline-block;
+    float: right;
+    padding: 1rem 1.8rem;
+    margin-right: 1rem;
+    border-radius: 0.3rem;
+    border-style: none;
+    background-color: #44A5FF;
+    color: white;
+}
+    
+#editSave p {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    line-height: normal;
+}
+
+/* #preview {
     border: none;
     background-color: transparent;
     color: white;
@@ -200,38 +263,15 @@ a {
     font-size: 0.813rem;
     font-weight: 400;
     letter-spacing: 0.1rem;
-}
+} */
 
-#undo {
-    border: none;
-    background-color: transparent;
-}
-
-#redo {
-    border: none;
-    background-color: transparent;
-}
-
-#rotate {
-    border: none;
-    background-color: transparent;
-}
-
-#editSave {
-    border-radius: 0.3rem;
-    border-style: none;
-    background-color: #44A5FF;
-    color: white;
-    padding: 0.5rem 1.2rem;
-}
-    
-#editSave p {
-    font-size: 0.813rem;
-    font-weight: 700;
-    letter-spacing: 0.1rem;
-}
 
 /* Colorpicker */
+#colorPicker {
+    width: 30%;
+    float: left;
+}
+
 input[type=color] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -245,19 +285,24 @@ input[type=color] {
     position: relative;
 }
 
-#colorPicker p {
-    font-size: 0.813rem;
-    font-weight: 700;
-    letter-spacing: 0.1rem;
+#tools {
+    margin-top: 1rem;
 }
 
-#penLabel p {
-    font-size: 0.813rem;
+#tools p {
+    text-align: left;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
 }
 
 /* Radiobuttons */
+#pen {
+    /* display: inline-block; */
+    float: right;
+    width: 70%;
+}
+
 input[type=radio] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -267,39 +312,63 @@ input[type=radio] {
     height: 15px;
     border: 2px solid white;
     background-color: white;
-    margin-right: 5px;
+    margin-right: 2rem;
     position: relative;
   }
 
 input[type=radio]:checked {
-    border-width: 4px;
+    border-width: 6px;
     border-color: #006ED3;
     background-color: white;
 }
 
+#small {
+    width: 50px;
+    height: 50px;
+}
+
 #medium {
-    width: 20px;
-    height: 20px;
+    width: 70px;
+    height: 70px;
 }
 
 #large {
-    width: 25px;
-    height: 25px;
-}
-
-#large input[type=radio]:checked{
-    width: 25px;
-    height: 25px;
-    background-color: red;
+    width: 90px;
+    height: 90px;
 }
 
 #xlarge {
-    width: 30px;
-    height: 30px;
+    width: 110px;
+    height: 110px;
 }
 
 #eraser {
     border: none;
     background-color: transparent;
-    
+}
+
+/* Instructions */
+#carrotMenu {
+    padding-bottom: 5rem;
+    display: inline-block;
+}
+
+#carrotMenu img{
+    float: right;
+    width: 35px;
+    margin-top: 0.7rem;
+    padding-right: 4rem;
+}
+
+/* Preset cards */
+#presets img{
+    width: 150px;
+}
+
+#presets div{
+    display: inline-block;
+    padding: 0.4rem 0.4rem 3rem 0.4rem;
+    margin: 1rem 0.4rem 0.2rem 0.4rem;
+    background-color: #283D72;
+    border-radius: 0.4rem;
 }

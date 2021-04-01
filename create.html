@@ -19,17 +19,19 @@
 <body>
     <header>
         <a href="index.html">
-            <img src="assets/home-icon.png" alt="home">
+            <img id="homeButton" img src="assets/home-icon.png" alt="home">
         </a>
-        <img class="brightmindsLogo" img src="assets/BrightMinds_Logo.png" alt="logo">
+        <a href="index.html">
+            <img id="brightmindsLogo" img src="assets/BrightMinds_Logo.png" alt="logo">
+        </a>
     </header>
     <main>
         <div id="createTop">
-            <button id="preview"><p>PREVIEW</p></button>
-            <button id="undo"><img src="assets/icons/undo_icon.png"></button>
-            <button id="redo"><img src="assets/icons/redo_icon.png"></button>
-            <button id="rotate"><img src="assets/icons/rotate_icon.png"></button>
-            <button id="editSave" class="save"><p>SAVE</p></button>
+            <!-- <button id="preview"><p>PREVIEW</p></button> -->
+            <button id="undo"><img src="assets/icons/inactive-undo.png"></button>
+            <button id="redo"><img src="assets/icons/inactive-redo.png"></button>
+            <button id="rotate"><img src="assets/icons/rotate.png"></button>
+            <button id="editSave"><p>SAVE</p></button>
         </div>
 
         <div id="cap">
@@ -64,7 +66,7 @@
                 <input type="radio" id="xlarge" name="penSize" value="30">
 
                 <!-- ERASER -->
-                <button id="eraser"><img src="assets/icons/eraser_icon.png"></button>
+                <button id="eraser"><img src="assets/icons/inactive-eraser.png" style="margin-bottom: -1.2rem; width: 110px;"></button>
             </div>
         </div>
 
