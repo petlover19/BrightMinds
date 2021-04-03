@@ -1,8 +1,9 @@
 let capCanvas = document.querySelector("#cap");
 let redoBtn = document.querySelector("#redo");
 let undoBtn = document.querySelector("#undo");
-let pSize = document.querySelector("#penSize");
 let rotateBtn = document.querySelector("#rotate");
+let pSize = document.getElementsByName("penSize");
+
 
 let color = { r: 255, g: 255, b: 255 };
 let cSize = window.innerWidth
@@ -36,7 +37,6 @@ function setup() {
     colorPicker.parent(cp);
     cp.id="cp";
    // colorPicker.position(15, cSize + 300);
-  console.log("size",size+12)
 }
 
 function draw() {
@@ -44,8 +44,12 @@ function draw() {
     // cSize = window.innerWidth;
     background(23, 35, 67)
     fill(0, 52, 153)
-    
-    
+    for(let i=0;i<pSize.length;i++){
+        if(pSize[i].checked){
+            size=pSize[i].value;
+        }
+    }
+// console.log(pSize.value)
     // if(rotated==true){
     //     translate(width/2,height/2)
     //     rotate(45);
@@ -63,10 +67,10 @@ function draw() {
     for (let c in leds) {
         for (let r in leds[c]) {
             if (mouseIsPressed) {
-                if (mouseX > leds[c][r].xpos - (12+size) &&
-                    mouseX < leds[c][r].xpos + (12+size) &&
-                    mouseY > leds[c][r].ypos - (12+size) &&
-                    mouseY < leds[c][r].ypos + (12+size)) {
+                if (mouseX + size > leds[c][r].xpos &&
+                    mouseX - size < leds[c][r].xpos &&
+                    mouseY + size > leds[c][r].ypos &&
+                    mouseY - size < leds[c][r].ypos ) {
                     let pColor = leds[c][r].color;
 
                     color.r=colorPicker.color().levels[0];
