@@ -5,11 +5,13 @@ let page=0;
 
 window.onload=load;
 function load() {
-    for(let i=0;i<10;i++){
+    for(let i=0;i<10;i++) {
         let preset=document.createElement("div");
         preset.class="preset";
+
         let img=document.createElement("img");
         img.src=images[i+page];
+
         img
         let name=document.createElement("p"); 
         preset.appendChild(img);
