@@ -9,9 +9,21 @@ main {
     margin-right: 0.625rem;
 }
 
-.brightmindsLogo {
+.homeButton {
+    /* width: 10%; */
     display: inline-block;
-    margin: auto;
+    float: left;
+}
+
+.topLogo {
+    width: 20%;
+    display: inline-block;
+}
+
+.brightmindsLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
@@ -137,10 +149,6 @@ a {
     text-decoration: none;
 }
 
-#homeButton {
-    width: 32px;
-}
-
 #teamTitle {
     display: block;
     border-bottom: 1px solid white;
@@ -261,9 +269,14 @@ button {
 
 
 /* Colorpicker */
-#colorPicker {
+#cp {
     width: 30%;
     float: left;
+    height: 172px;
+}
+
+#cp p {
+    margin-bottom: 20px;
 }
 
 input[type=color] {
@@ -272,15 +285,14 @@ input[type=color] {
     appearance: none;
 
     border: none;
-    border-radius: 20px;
-    width: 45px;
-    height: 20px;
-    margin-right: 5px;
-    position: relative;
+    border-radius: 10px;
+    width: 200px;
+    height: 70px;
+    padding: 10px;
 }
 
 #tools {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 #tools p {
@@ -294,7 +306,7 @@ input[type=color] {
 #pen {
     /* display: inline-block; */
     float: right;
-    width: 70%;
+    width: 65%;
 }
 
 input[type=radio] {
