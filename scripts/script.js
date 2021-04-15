@@ -10,10 +10,10 @@ function load() {
         preset.class="preset";
         let img=document.createElement("img");
         img.src=images[i+page];
-        img
+        img;
         let name=document.createElement("p"); 
         preset.appendChild(img);
-        preset.appendChild(name)
+        preset.appendChild(name);
         presets.appendChild(preset);
     }
 }
