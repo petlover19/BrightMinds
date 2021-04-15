@@ -145,7 +145,7 @@ a {
     display: block;
     border-bottom: 1px solid white;
     text-align: center;
-    padding: 40px 0px 25px 0px;
+    padding: 20px 0px 25px 0px;
 }
 
 #designCat,
@@ -208,7 +208,6 @@ button {
     background-color: transparent;
     margin-top: 2rem;
     margin-bottom: 3rem;
-    
 }
 
 #createTop img {
@@ -366,4 +365,34 @@ input[type=radio]:checked {
     margin: 1rem 0.4rem 0.2rem 0.4rem;
     background-color: #283D72;
     border-radius: 0.4rem;
+}
+
+/*Preset Popup */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #283D72; /* Fallback color */
+}
+  
+/* Modal Content/Box */
+.popup-content {
+    background-color: #283D72;;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border-style: none;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+/* The Close Button */
+.close {
+    color: #aaa;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
