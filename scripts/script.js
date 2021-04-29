@@ -11,11 +11,15 @@ function load() {
 
         let img=document.createElement("img");
         img.src=images[i+page];
+<<<<<<< HEAD
+        img;
+=======
 
         img
+>>>>>>> a92bdea0a6551c24f9fc520f056002c0415964f0
         let name=document.createElement("p"); 
         preset.appendChild(img);
-        preset.appendChild(name)
+        preset.appendChild(name);
         presets.appendChild(preset);
     }
 }
