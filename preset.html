@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="icon" href="assets/apple-touch-icon.png" type="image">
 </head>
 
 <body>
@@ -34,6 +35,15 @@
         </div>
         <section id="presets">
         </section>
+
+        <div id="trial">
+                <img src="assets/presets/tiger.png" style="width:140px;"
+                onclick="document.getElementById('modal01').style.display='block'">
+              
+                <div id="modal01" class="modal" onclick="this.style.display='none'">
+                    <img src="assets/presets/tiger.png" style="width:60%; ">
+                  </div>
+        </div>
 
         <!-- <div class="pageNumbers">
             <p>1</p>

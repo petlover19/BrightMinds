@@ -107,6 +107,11 @@ p {
     margin: 0;
 }
 
+.button {
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .about {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -368,19 +373,19 @@ input[type=radio]:checked {
 
 /* Preset cards */
 #presets img{
-    width: 135px;
+    width: 140px;
 }
 
 #presets div{
     display: inline-block;
-    padding: 0.4rem 0.4rem 3rem 0.4rem;
+    padding: 0.4rem;
     margin: 1rem 0.4rem 0.2rem 0.4rem;
     background-color: #283D72;
     border-radius: 0.4rem;
 }
 
-/*Preset Popup */
-.popup {
+/*Preset Modal*/
+.modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -393,13 +398,21 @@ input[type=radio]:checked {
 }
   
 /* Modal Content/Box */
-.popup-content {
+.modal-content {
     background-color: #283D72;;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border-style: none;
     width: 80%; /* Could be more or less, depending on screen size */
   }
+
+/* Connect to Cap button */
+.connect {
+    color: #6FAE3D;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
   
 /* The Close Button */
 .close {
@@ -407,4 +420,17 @@ input[type=radio]:checked {
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+/* Cap Connecting */
+#loading {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+
+.message {
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
 }
