@@ -1,5 +1,5 @@
 let presets = document.querySelector("#presets");
-let images=["assets/presets/pikachu.png","assets/presets/cOf2021.png","assets/presets/IMadeIt.png","assets/presets/tiger.png","assets/presets/RITGrad.png"]
+let images=["assets/presets/clownfish.png","assets/presets/firework.png","assets/presets/rainbow.png","assets/presets/chemistry.png","assets/presets/2021grad.png"]
 
 let page=0;
 
