@@ -213,6 +213,11 @@ button {
     border: none;
     background-color: transparent;
     position: relative;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-weight: bold;
 }
 
 /* Create Design Buttons above the canvas*/
@@ -423,14 +428,57 @@ input[type=radio]:checked {
 }
 
 /* Cap Connecting */
-#loading {
-    text-align: center;
-    width: 70%;
-    margin: auto;
-}
-
-.message {
-    margin-top: 0.5rem;
+.loading {
+    display: block;
+    margin-top: 25%;
     margin-left: auto;
     margin-right: auto;
+    background: url("assets/loading-cap.png") center no-repeat;
+    background-size: 60%;
+}
+
+.loader {
+    z-index: -1;
+    border: 5px solid #00031F;
+    border-top: 5px solid #44A5FF; /* Blue */
+    border-right: 5px solid #44A5FF; /* Blue */
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    animation: spin 2s infinite;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loadingIMG {
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Loading message */
+.message {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem;
+}
+
+.message p {
+    font-size: 1rem;
+}
+
+#retryButton {
+    background-color: #44A5FF;
+    padding: 0.9rem 3.3rem;
+    margin-top: 2rem;
+    border-radius: 3px;
 }
