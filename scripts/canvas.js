@@ -2,7 +2,9 @@ let capCanvas = document.querySelector("#cap");
 let redoBtn = document.querySelector("#redo");
 let undoBtn = document.querySelector("#undo");
 let rotateBtn = document.querySelector("#rotate");
+let rubbereraser = document.querySelector("#rubbereraser");
 let pSize = document.getElementsByName("penSize");
+
 
 
 let color = { r: 255, g: 255, b: 255 };
@@ -13,8 +15,10 @@ let moves = [];
 let set = [];
 let current = -1;
 let colorPicker;
-let size=0;
-let rotated=false;
+let size = 0;
+let rotated = false;
+let rubber = false; //rubbereraser
+let jso;
 
 
 function setup() {
@@ -23,7 +27,7 @@ function setup() {
     canvas.parent(capCanvas);
 
     angleMode(DEGREES)
-   
+
     for (let col = 0; col < 32; col++) {
         let rows = [];
         for (let row = 0; row < 32; row++) {
@@ -33,10 +37,10 @@ function setup() {
         leds.push(rows);
     }
     colorPicker = createColorPicker('#ed225d');
-    let cp=document.querySelector("#colorPicker")
+    let cp = document.querySelector("#colorPicker")
     colorPicker.parent(cp);
-    cp.id="cp";
-   // colorPicker.position(15, cSize + 300);
+    cp.id = "cp";
+    // colorPicker.position(15, cSize + 300);
 }
 
 function draw() {
@@ -44,12 +48,15 @@ function draw() {
     // cSize = window.innerWidth;
     background(23, 35, 67)
     fill(0, 52, 153)
-    for(let i=0;i<pSize.length;i++){
-        if(pSize[i].checked){
-            size=pSize[i].value;
+    for (let i = 0; i < pSize.length; i++) {
+        if (pSize[i].checked) {
+            size = pSize[i].value;
+
         }
     }
-// console.log(pSize.value)
+    // size = pSize.value;
+
+
     // if(rotated==true){
     //     translate(width/2,height/2)
     //     rotate(45);
@@ -70,15 +77,20 @@ function draw() {
                 if (mouseX + size > leds[c][r].xpos &&
                     mouseX - size < leds[c][r].xpos &&
                     mouseY + size > leds[c][r].ypos &&
-                    mouseY - size < leds[c][r].ypos ) {
+                    mouseY - size < leds[c][r].ypos) {
                     let pColor = leds[c][r].color;
-
-                    color.r=colorPicker.color().levels[0];
-                    color.g=colorPicker.color().levels[1];
-                    color.b=colorPicker.color().levels[2];
+                    if (rubber) {
+                        color.r = 0;
+                        color.g = 0;
+                        color.b = 0;
+                    } else {
+                        color.r = colorPicker.color().levels[0];
+                        color.g = colorPicker.color().levels[1];
+                        color.b = colorPicker.color().levels[2];
+                    }
 
                     leds[c][r].color = color
-                    leds[c][r].lastC =pColor
+                    leds[c][r].lastC = pColor
                     let info = {
                         col: c,
                         row: r,
@@ -91,9 +103,45 @@ function draw() {
             leds[c][r].draw()
         }
     }
+    if (mousePressed) {
+        fill(255)
+        ellipse(mouseX, mouseY, size * 2, size * 2)
+            // console.log("size", size)
+        finalize();
+    }
     movesBtns();
 }
 
+function finalize() {
+    let bob = []
+    for (let c in leds) {
+        for (let r in leds[c]) {
+            let l = leds[c][r].color
+                // let setting = {
+                //     x: c,
+                //     y: r,
+                //     c: l.color
+                // }
+            let rs = l.r;
+            let gs = l.g;
+            let bs = l.b;
+            // let light = rgbToHex(leds[c][r].color.r, leds[c][r].color.g, leds[c][r].color.b)
+            bob.push(rs);
+            bob.push(gs);
+            bob.push(bs);
+            // bob.push(setting);
+        }
+    }
+    jso = JSON.stringify(bob)
+        // jso = jso.replace("{", "(");
+        // jso = jso.replace("}", ")");
+        // jso = jso.replace("[", "{");
+        // jso = jso.replace("]", "}");
+}
+
+function rgbToHex(r, g, b) {
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
 undoBtn.onclick = undo;
 
 function undo() {
@@ -125,8 +173,17 @@ function redo() {
     }
 }
 
+rubber.onclick = () => {
+    if (rubber == false) {
+        rubber = true;
+    } else {
+        rubber = false
+    }
+}
+
+
 function mousePressed() {
-    set.length=0;
+    set.length = 0;
     console.log(set)
 }
 
@@ -142,24 +199,25 @@ function mouseReleased() {
 }
 
 function movesBtns() {
-    if(moves.length!=-1){
+    if (moves.length != -1) {
         if (current == moves.length - 1) {
             redoBtn.style.display = "none";
         } else if (current == -1) {
             undoBtn.style.display = "none";
         }
-    }else {
+    } else {
         undoBtn.style.display = "inline-block";
         redoBtn.style.display = "inline-block";
     }
 }
 
-rotateBtn.onclick=rotater;
-function rotater(){
-    if(rotated==true){
-        rotated=false
-    }else{
-        rotated=true
+rotateBtn.onclick = rotater;
+
+function rotater() {
+    if (rotated == true) {
+        rotated = false
+    } else {
+        rotated = true
     }
 }
 

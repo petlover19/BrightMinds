@@ -3,19 +3,19 @@ class LED {
         this.xpos = xpos;
         this.ypos = ypos;
         this.color = {
-            r: 133,
-            g: 133,
-            b: 133
+            r: 0,
+            g: 0,
+            b: 0
         }
-        this.lastC={
-            r: 133,
-            g: 133,
-            b: 133
+        this.lastC = {
+            r: 0,
+            g: 0,
+            b: 0
         }
     }
     draw() {
         rectMode(CENTER);
         fill(this.color.r, this.color.g, this.color.b)
-        rect(this.xpos, this.ypos, 20,20)
+        rect(this.xpos, this.ypos, 20, 20)
     }
 }
