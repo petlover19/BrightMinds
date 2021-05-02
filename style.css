@@ -9,9 +9,21 @@ main {
     margin-right: 0.625rem;
 }
 
-.brightmindsLogo {
+.homeButton {
+    /* width: 10%; */
     display: inline-block;
-    margin: auto;
+    float: left;
+}
+
+.topLogo {
+    width: 20%;
+    display: inline-block;
+}
+
+.brightmindsLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
@@ -95,6 +107,11 @@ p {
     margin: 0;
 }
 
+.button {
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .about {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -135,10 +152,6 @@ p {
 a {
     color: white;
     text-decoration: none;
-}
-
-#homeButton {
-    width: 32px;
 }
 
 #teamTitle {
@@ -207,6 +220,11 @@ button {
     border: none;
     background-color: transparent;
     position: relative;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-weight: bold;
 }
 
 
@@ -271,10 +289,19 @@ button {
 
 
 /* Colorpicker */
+<<<<<<< HEAD
 
 #colorPicker {
+=======
+#cp {
+>>>>>>> 84829c91ad51dd5ba059dedcfe6675f44442d345
     width: 30%;
     float: left;
+    height: 172px;
+}
+
+#cp p {
+    margin-bottom: 20px;
 }
 
 input[type=color] {
@@ -282,15 +309,14 @@ input[type=color] {
     -moz-appearance: none;
     appearance: none;
     border: none;
-    border-radius: 20px;
-    width: 45px;
-    height: 20px;
-    margin-right: 5px;
-    position: relative;
+    border-radius: 10px;
+    width: 200px;
+    height: 70px;
+    padding: 10px;
 }
 
 #tools {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 #tools p {
@@ -306,7 +332,7 @@ input[type=color] {
 #pen {
     /* display: inline-block; */
     float: right;
-    width: 70%;
+    width: 65%;
 }
 
 input[type=radio] {
@@ -370,19 +396,25 @@ input[type=radio]:checked {
 
 
 /* Preset cards */
+<<<<<<< HEAD
 
 #presets img {
     width: 135px;
+=======
+#presets img{
+    width: 140px;
+>>>>>>> 84829c91ad51dd5ba059dedcfe6675f44442d345
 }
 
 #presets div {
     display: inline-block;
-    padding: 0.4rem 0.4rem 3rem 0.4rem;
+    padding: 0.4rem;
     margin: 1rem 0.4rem 0.2rem 0.4rem;
     background-color: #283D72;
     border-radius: 0.4rem;
 }
 
+<<<<<<< HEAD
 
 /*Preset Popup */
 
@@ -393,6 +425,13 @@ input[type=radio]:checked {
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
+=======
+/*Preset Modal*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+>>>>>>> 84829c91ad51dd5ba059dedcfe6675f44442d345
     left: 0;
     top: 0;
     width: 100%;
@@ -407,6 +446,7 @@ input[type=radio]:checked {
 
 
 /* Modal Content/Box */
+<<<<<<< HEAD
 
 .popup-content {
     background-color: #283D72;
@@ -420,6 +460,24 @@ input[type=radio]:checked {
 }
 
 
+=======
+.modal-content {
+    background-color: #283D72;;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border-style: none;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+/* Connect to Cap button */
+.connect {
+    color: #6FAE3D;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+  
+>>>>>>> 84829c91ad51dd5ba059dedcfe6675f44442d345
 /* The Close Button */
 
 .close {
@@ -427,4 +485,60 @@ input[type=radio]:checked {
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+/* Cap Connecting */
+.loading {
+    display: block;
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    background: url("assets/loading-cap.png") center no-repeat;
+    background-size: 60%;
+}
+
+.loader {
+    z-index: -1;
+    border: 5px solid #00031F;
+    border-top: 5px solid #44A5FF; /* Blue */
+    border-right: 5px solid #44A5FF; /* Blue */
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    animation: spin 2s infinite;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loadingIMG {
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Loading message */
+.message {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem;
+}
+
+.message p {
+    font-size: 1rem;
+}
+
+#retryButton {
+    background-color: #44A5FF;
+    padding: 0.9rem 3.3rem;
+    margin-top: 2rem;
+    border-radius: 3px;
 }
