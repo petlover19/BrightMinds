@@ -9,21 +9,25 @@ main {
     margin-right: 0.625rem;
 }
 
+header {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-align: center;
+}
+
 .homeButton {
-    /* width: 10%; */
-    display: inline-block;
     float: left;
 }
 
 .topLogo {
-    width: 20%;
-    display: inline-block;
+    text-align: center;
+    width: 100%;
 }
 
 .brightmindsLogo {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
 }
 
 footer {
@@ -43,12 +47,12 @@ footer p {
 
 .base {
     margin: 0.75rem 0rem;
+    text-align: center;
 }
 
 .base a {
     padding-right: 20px;
     margin-right: 20px;
-    border-right: 1px solid white;
 }
 
 h1 {
@@ -193,41 +197,6 @@ a {
 }
 
 
-/* Page Numbers in Premade Design */
-
-.pageNumbers {
-    /* display: inline-block;
-    margin: auto; */
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.pageNumbers p {
-    color: white;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-    text-decoration: none;
-}
-
-.pageNumbers img {
-    padding-left: 1.5rem;
-}
-
-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    background-color: transparent;
-    position: relative;
-    color: white;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    font-weight: bold;
-}
-
-
 /* Create Design Buttons above the canvas*/
 
 #createTop {
@@ -244,10 +213,14 @@ button {
 }
 
 #undo {
+    border: none;
+    background-color: transparent;
     padding-right: 1rem;
 }
 
 #redo {
+    border: none;
+    background-color: transparent;
     padding-right: 1rem;
 }
 
@@ -289,12 +262,7 @@ button {
 
 
 /* Colorpicker */
-<<<<<<< HEAD
-
-#colorPicker {
-=======
 #cp {
->>>>>>> 84829c91ad51dd5ba059dedcfe6675f44442d345
     width: 30%;
     float: left;
     height: 172px;
@@ -382,7 +350,7 @@ input[type=radio]:checked {
 
 /* Instructions */
 
-#carrotMenu {
+/* #carrotMenu {
     padding-bottom: 5rem;
     display: inline-block;
 }
@@ -392,102 +360,86 @@ input[type=radio]:checked {
     width: 35px;
     margin-top: 0.7rem;
     padding-right: 4rem;
-}
-
+} */
 
 /* Preset cards */
-<<<<<<< HEAD
-
-#presets img {
-    width: 135px;
-=======
 #presets img{
-    width: 140px;
->>>>>>> 84829c91ad51dd5ba059dedcfe6675f44442d345
+    width: 8rem;
 }
 
 #presets div {
     display: inline-block;
     padding: 0.4rem;
     margin: 1rem 0.4rem 0.2rem 0.4rem;
-    background-color: #283D72;
+    border: 0.5rem solid #4465B8;
     border-radius: 0.4rem;
 }
 
-<<<<<<< HEAD
-
-/*Preset Popup */
-
-.popup {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-=======
 /*Preset Modal*/
-.modal {
-    display: none; /* Hidden by default */
+.presetModal {
+    /* display: none; Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
->>>>>>> 84829c91ad51dd5ba059dedcfe6675f44442d345
     left: 0;
     top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: #283D72;
-    /* Fallback color */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
 }
-
 
 /* Modal Content/Box */
-<<<<<<< HEAD
-
-.popup-content {
-    background-color: #283D72;
-    ;
-    margin: 15% auto;
-    /* 15% from the top and centered */
+.modal {
+    display: block;
+    margin: auto; /* 15% from the top and centered */
     padding: 20px;
-    border-style: none;
-    width: 80%;
-    /* Could be more or less, depending on screen size */
+    border-radius: 0.5rem;
+    background: #0F245B;
+    width: 60%; /* Could be more or less, depending on screen size */ 
 }
 
+.modal img {
+    display: block;
+    width: 90%;
+    margin-bottom: 1.5rem;
+}
 
-=======
-.modal-content {
-    background-color: #283D72;;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border-style: none;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
+/* Buttons: Aligns buttons */
+/* .buttons {
+    margin: auto;
+    width: 50%;
+    
+} */
 
 /* Connect to Cap button */
-.connect {
-    color: #6FAE3D;
+.connectButton {
+    background-color: #6FAE3D;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.3rem;
+    border: none;
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: bolder;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
   
->>>>>>> 84829c91ad51dd5ba059dedcfe6675f44442d345
 /* The Close Button */
-
-.close {
-    color: #aaa;
+.closeButton {
+    background-color: #0F245B;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.3rem;
+    border: 0.05rem solid white;
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
 }
 
-/* Cap Connecting */
+/* Loading Cap Image within loader*/
 .loading {
     display: block;
     margin-top: 25%;
@@ -517,6 +469,7 @@ input[type=radio]:checked {
     100% { transform: rotate(360deg); }
 }
 
+/* Image div for Successful and Failed state */
 .loadingIMG {
     margin-top: 25%;
     margin-left: auto;

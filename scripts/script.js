@@ -1,11 +1,11 @@
 let presets = document.querySelector("#presets");
-let images=["assets/presets/clownfish.png","assets/presets/firework.png","assets/presets/rainbow.png","assets/presets/chemistry.png","assets/presets/2021grad.png"]
+let images=["assets/presets/clownfish.png","assets/presets/firework.png","assets/presets/rainbow.png","assets/presets/chemistry.png","assets/presets/2021grad.png","assets/presets/wires.png"]
 
 let page=0;
 
 window.onload=load;
 function load() {
-    for(let i=0;i<10;i++) {
+    for(let i=0;i<6;i++) {
         let preset=document.createElement("div");
         preset.class="preset";
 
