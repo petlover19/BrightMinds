@@ -185,21 +185,28 @@ a {
     left: 50px;
 } */
 
+#cree {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
 
 /* Page Numbers in Premade Design */
+
 .pageNumbers {
     /* display: inline-block;
     margin: auto; */
     text-align: center;
     margin-top: 2rem;
-  }
-  
+}
+
 .pageNumbers p {
     color: white;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     text-decoration: none;
-  }
+}
 
 .pageNumbers img {
     padding-left: 1.5rem;
@@ -219,7 +226,9 @@ button {
     font-weight: bold;
 }
 
+
 /* Create Design Buttons above the canvas*/
+
 #createTop {
     border: none;
     background-color: transparent;
@@ -256,13 +265,14 @@ button {
     background-color: #44A5FF;
     color: white;
 }
-    
+
 #editSave p {
     font-size: 2.2rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
     line-height: normal;
 }
+
 
 /* #preview {
     border: none;
@@ -278,7 +288,12 @@ button {
 
 
 /* Colorpicker */
+<<<<<<< HEAD
+
+#colorPicker {
+=======
 #cp {
+>>>>>>> 84829c91ad51dd5ba059dedcfe6675f44442d345
     width: 30%;
     float: left;
     height: 172px;
@@ -292,7 +307,6 @@ input[type=color] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
     border: none;
     border-radius: 10px;
     width: 200px;
@@ -311,7 +325,9 @@ input[type=color] {
     letter-spacing: 0.1rem;
 }
 
+
 /* Radiobuttons */
+
 #pen {
     /* display: inline-block; */
     float: right;
@@ -362,25 +378,34 @@ input[type=radio]:checked {
     background-color: transparent;
 }
 
+
 /* Instructions */
+
 #carrotMenu {
     padding-bottom: 5rem;
     display: inline-block;
 }
 
-#carrotMenu img{
+#carrotMenu img {
     float: right;
     width: 35px;
     margin-top: 0.7rem;
     padding-right: 4rem;
 }
 
+
 /* Preset cards */
+<<<<<<< HEAD
+
+#presets img {
+    width: 135px;
+=======
 #presets img{
     width: 140px;
+>>>>>>> 84829c91ad51dd5ba059dedcfe6675f44442d345
 }
 
-#presets div{
+#presets div {
     display: inline-block;
     padding: 0.4rem;
     margin: 1rem 0.4rem 0.2rem 0.4rem;
@@ -388,20 +413,53 @@ input[type=radio]:checked {
     border-radius: 0.4rem;
 }
 
+<<<<<<< HEAD
+
+/*Preset Popup */
+
+.popup {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+=======
 /*Preset Modal*/
 .presetModal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
+>>>>>>> 84829c91ad51dd5ba059dedcfe6675f44442d345
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: #283D72; /* Fallback color */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: #283D72;
+    /* Fallback color */
 }
-  
+
+
 /* Modal Content/Box */
+<<<<<<< HEAD
+
+.popup-content {
+    background-color: #283D72;
+    ;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border-style: none;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+=======
 .modal-content {
     background-color: #283D72;;
     margin: 15% auto; /* 15% from the top and centered */
@@ -418,7 +476,9 @@ input[type=radio]:checked {
     font-weight: bolder;
 }
   
+>>>>>>> 84829c91ad51dd5ba059dedcfe6675f44442d345
 /* The Close Button */
+
 .close {
     color: #aaa;
     text-align: center;
