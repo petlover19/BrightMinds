@@ -11,7 +11,6 @@ main {
 
 .homeButton {
     /* width: 10%; */
-    display: inline-block;
     float: left;
 }
 
@@ -390,7 +389,7 @@ input[type=radio]:checked {
 }
 
 /*Preset Modal*/
-.modal {
+.presetModal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -427,7 +426,7 @@ input[type=radio]:checked {
     font-weight: bold;
 }
 
-/* Cap Connecting */
+/* Loading Cap Image within loader*/
 .loading {
     display: block;
     margin-top: 25%;
@@ -457,6 +456,7 @@ input[type=radio]:checked {
     100% { transform: rotate(360deg); }
 }
 
+/* Image div for Successful and Failed state */
 .loadingIMG {
     margin-top: 25%;
     margin-left: auto;
