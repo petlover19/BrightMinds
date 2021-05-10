@@ -14,16 +14,12 @@
 
 <body>
     <header>
-        <div class="homeButton">
-            <a href="index.html">
-                <img id="homeButton" img src="assets/home-icon.png" alt="home">
-            </a>
-        </div>
-        <div class="topLogo">
-            <a href="index.html">
-                <img src="assets/BrightMinds_Logo.png" alt="logo">
-            </a>
-        </div>
+        <a href="index.html">
+            <img id="homeButton" img src="assets/home-icon.png" alt="home" style="float: left; width: 2.2rem;">
+        </a>
+        <a href="index.html">
+            <img src="assets/BrightMinds_Logo.png" alt="logo" style="width: 15rem;">
+        </a>
     </header>
 
     <main>
@@ -37,24 +33,7 @@
             
         </section>
         
-        <div class="presetModal">
-            <!-- Load img/Trigger to Open the Modal -->
-            <img src="assets/presets/tiger.png" onclick="document.getElementById('modalID').style.display='block'">
-          
-            <!-- The modal -->
-            <div id="modalID" class="modal">
-                <!-- Modal Content -->
-                <img src="assets/presets/tiger.png">
-                    <div class="buttons">
-                        <div>
-                            <a href="loading.html"><button class="connectButton">Connect to Cap</button></a>
-                        </div>
-                        <div>
-                            <button class="closeButton" onclick="document.getElementById('modalID').style.display='none'">Keep Browsing</button>
-                        </div>
-                    </div>
-              </div>
-    </div>
+        
 
         <script src="scripts/script.js" type="text/javascript"></script>
     </main>
