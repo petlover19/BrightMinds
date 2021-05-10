@@ -153,6 +153,12 @@ p {
     margin: 0px;
 }
 
+#aboutCat {
+    height: 60px;
+    background: none;
+    border: 2px solid white;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -178,9 +184,10 @@ a {
 }
 
 #aboutCat {
-    background-color: #0032E5;
+    background-color: none;
     text-align: center;
-    padding-top: 1.9rem;
+    height: 45px;
+    top: 50%;
 }
 
 

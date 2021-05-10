@@ -30,18 +30,39 @@
             </p>
         </div>
         <section id="presets">
-            
+
         </section>
-        
-        
+
+        <div id=pep class="presetModal">
+            <!-- Load img/Trigger to Open the Modal -->
+            <!-- <img src="assets/presets/tiger.png" onclick="document.getElementById('modalID').style.display='block'"> -->
+
+            <!-- The modal -->
+            <div id="modalID" class="modal">
+                <!-- Modal Content -->
+                <img id=prev src="assets/presets/clownfish.png">
+                <div class="buttons">
+                    <div>
+                        <a href="loading.html"><button class="connectButton upload">Connect to Cap</button></a>
+                    </div>
+                    <div>
+                        <button class="closeButton" onclick="document.getElementById('modalID').style.display='none'">Keep Browsing</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="scripts/script.js" type="text/javascript"></script>
+        <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/upload.js"></script>
     </main>
     <footer>
+        <div>
         <img class="footerLogo" img src="assets/brightminds-footer-logo.png" alt="logo" style="width: 160px;">
-    <p>&#169; 2021 Team Major Anxiety</p>
-</footer>
-    
+    </div>
+        <p>&#169; 2021 Team Major Anxiety</p>
+    </footer>
+
 </body>
 
 </html>
