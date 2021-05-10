@@ -34,41 +34,44 @@
             </p>
         </div>
         <section id="presets">
-            
+
         </section>
-        
-        <div class="presetModal">
+
+        <div id=pep class="presetModal">
             <!-- Load img/Trigger to Open the Modal -->
-            <img src="assets/presets/tiger.png" onclick="document.getElementById('modalID').style.display='block'">
-          
+            <!-- <img src="assets/presets/tiger.png" onclick="document.getElementById('modalID').style.display='block'"> -->
+
             <!-- The modal -->
             <div id="modalID" class="modal">
                 <!-- Modal Content -->
-                <img src="assets/presets/tiger.png">
-                    <div class="buttons">
-                        <div>
-                            <a href="loading.html"><button class="connectButton">Connect to Cap</button></a>
-                        </div>
-                        <div>
-                            <button class="closeButton" onclick="document.getElementById('modalID').style.display='none'">Keep Browsing</button>
-                        </div>
+                <img id=prev src="assets/presets/clownfish.png">
+                <div class="buttons">
+                    <div>
+                        <a href="loading.html"><button class="connectButton upload">Connect to Cap</button></a>
                     </div>
-              </div>
-    </div>
+                    <div>
+                        <button class="closeButton" onclick="document.getElementById('modalID').style.display='none'">Keep Browsing</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="scripts/script.js" type="text/javascript"></script>
+        <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/upload.js"></script>
     </main>
     <footer>
         <img class="footerLogo" img src="assets/brightminds-footer-logo.png" alt="logo" style="width: 160px;">
         <div class="base">
             <a href="index.html" style="border-right: 1px solid white;">Home</a>
             <!-- <a href="instructions.html">Instructions</a> -->
-            <a href="designLanding.html" style="padding:0px; margin:0;">Design</a>
+            <a href="index.html" style="border-right: 1px solid white;">Design</a>
             <!-- <a href="about.html" style="padding:0px; margin:0px; border-style: none;">About Us</a> -->
+            <a href="about.html" style="padding:0px; margin:0;">About Us</a>
         </div>
-    <p>&#169; 2021 Team Major Anxiety</p>
-</footer>
-    
+        <p>&#169; 2021 Team Major Anxiety</p>
+    </footer>
+
 </body>
 
 </html>

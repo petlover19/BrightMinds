@@ -2,7 +2,8 @@ let capCanvas = document.querySelector("#cap");
 let redoBtn = document.querySelector("#redo");
 let undoBtn = document.querySelector("#undo");
 let rotateBtn = document.querySelector("#rotate");
-let rubbereraser = document.querySelector("#rubbereraser");
+let upload = document.querySelectorAll(".upload");
+let rubbereraser = document.querySelector("#eraser");
 let pSize = document.getElementsByName("penSize");
 
 
@@ -11,6 +12,7 @@ let color = { r: 255, g: 255, b: 255 };
 let cSize = window.innerWidth
 
 let leds = [];
+let bob = [];
 let moves = [];
 let set = [];
 let current = -1;
@@ -70,14 +72,22 @@ function draw() {
     //cap box
     rect(20, 75, 920, 920, 5)
 
+    if (rubber == true) {
+        rubbereraser.firstElementChild.src = "assets/icons/active-eraser.png";
+        console.log("ereaser on");
+    } else {
+        rubbereraser.firstElementChild.src = "assets/icons/inactive-eraser.png";
+        console.log("ereaser off");
+    }
+
     //checks for led 
     for (let c in leds) {
         for (let r in leds[c]) {
             if (mouseIsPressed) {
-                if (mouseX + size > leds[c][r].xpos &&
-                    mouseX - size < leds[c][r].xpos &&
-                    mouseY + size > leds[c][r].ypos &&
-                    mouseY - size < leds[c][r].ypos) {
+                if (mouseX + size + 10 > leds[c][r].xpos &&
+                    mouseX - size - 10 < leds[c][r].xpos &&
+                    mouseY + size + 10 > leds[c][r].ypos &&
+                    mouseY - size - 10 < leds[c][r].ypos) {
                     let pColor = leds[c][r].color;
                     if (rubber) {
                         color.r = 0;
@@ -113,7 +123,7 @@ function draw() {
 }
 
 function finalize() {
-    let bob = []
+    bob = []
     for (let c in leds) {
         for (let r in leds[c]) {
             let l = leds[c][r].color
@@ -138,6 +148,13 @@ function finalize() {
         // jso = jso.replace("[", "{");
         // jso = jso.replace("]", "}");
 }
+rubbereraser.onclick = (() => {
+    if (rubber == true) {
+        rubber = false;
+    } else {
+        rubber = true;
+    }
+});
 
 function rgbToHex(r, g, b) {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
@@ -184,7 +201,7 @@ rubber.onclick = () => {
 
 function mousePressed() {
     set.length = 0;
-    console.log(set)
+    // console.log(set)
 }
 
 function mouseReleased() {
@@ -227,3 +244,10 @@ window.onresize = windowResized;
 function windowResized() {
     cSize = window.innerWidth;
 }
+
+// upload.onclick = up;
+
+// function up() {
+//     // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+//     $.get("http://192.168.4.1:80/", { leds: bob }); // execute get request
+// }
