@@ -11,18 +11,34 @@ window.onload = load;
 
 function load() {
     for (let i = 0; i < 6; i++) {
+        let detail = document.createElement("details");
+        let sum = document.createElement("summary");
         let preset = document.createElement("div");
         preset.class = "preset";
 
         let img = document.createElement("img");
         img.src = images[i];
-        if (img.src == "assets/presets/clownfish.png") {
-            img.id = "clown"
-        }
-        clown = document.querySelector("#clown");
 
+        let modal = document.createElement("div");
+        let a = document.createElement("a");
+        a.href = "loading.html";
+        a.innerHTML = '<button class="connectButton upload ">Connect to Cap</button>';
+        let close = document.createElement("button");
+        close.class = "closeButton";
+        modal.appendChild(a);
+        modal.appendChild(close);
+        modal.appendChild(img);
+        detail.appendChild(modal);
+
+        // if (img.src == "assets/presets/clownfish.png") {
+        //     img.id = "clown"
+        // }
+        // clown = document.querySelector("#clown");
+
+        detail.appendChild(sum);
+        sum.appendChild(preset);
         preset.appendChild(img);
-        presets.appendChild(preset);
+        presets.appendChild(detail);
     }
 }
 

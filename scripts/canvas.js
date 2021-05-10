@@ -89,22 +89,23 @@ function draw() {
                     mouseY + size + 10 > leds[c][r].ypos &&
                     mouseY - size - 10 < leds[c][r].ypos) {
                     let pColor = leds[c][r].color;
+                    let nColor = leds[c][r].color;
                     if (rubber) {
-                        color.r = 0;
-                        color.g = 0;
-                        color.b = 0;
+                        nColor.r = 0;
+                        nColor.g = 0;
+                        nColor.b = 0;
                     } else {
-                        color.r = colorPicker.color().levels[0];
-                        color.g = colorPicker.color().levels[1];
-                        color.b = colorPicker.color().levels[2];
+                        nColor.r = colorPicker.color().levels[0];
+                        nColor.g = colorPicker.color().levels[1];
+                        nColor.b = colorPicker.color().levels[2];
                     }
 
-                    leds[c][r].color = color
+                    leds[c][r].color = nColor
                     leds[c][r].lastC = pColor
                     let info = {
                         col: c,
                         row: r,
-                        nc: color,
+                        nc: nColor,
                         pc: pColor
                     };
                     set.push(info);
@@ -115,11 +116,11 @@ function draw() {
     }
     if (mousePressed) {
         fill(255)
-        ellipse(mouseX, mouseY, size * 2, size * 2)
+            // ellipse(mouseX, mouseY, size * 2, size * 2)
             // console.log("size", size)
         finalize();
     }
-    movesBtns();
+    // movesBtns();
 }
 
 function finalize() {
@@ -159,7 +160,7 @@ rubbereraser.onclick = (() => {
 function rgbToHex(r, g, b) {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
-undoBtn.onclick = undo;
+// undoBtn.onclick = undo;
 
 function undo() {
     current--;
@@ -180,7 +181,7 @@ function undo() {
         }
     }
 }
-redoBtn.onclick = redo;
+// redoBtn.onclick = redo;
 
 function redo() {
     current++;
@@ -215,20 +216,20 @@ function mouseReleased() {
     }
 }
 
-function movesBtns() {
-    if (moves.length != -1) {
-        if (current == moves.length - 1) {
-            redoBtn.style.display = "none";
-        } else if (current == -1) {
-            undoBtn.style.display = "none";
-        }
-    } else {
-        undoBtn.style.display = "inline-block";
-        redoBtn.style.display = "inline-block";
-    }
-}
+// function movesBtns() {
+//     if (moves.length != -1) {
+//         if (current == moves.length - 1) {
+//             redoBtn.style.display = "none";
+//         } else if (current == -1) {
+//             undoBtn.style.display = "none";
+//         }
+//     } else {
+//         undoBtn.style.display = "inline-block";
+//         redoBtn.style.display = "inline-block";
+//     }
+// }
 
-rotateBtn.onclick = rotater;
+// rotateBtn.onclick = rotater;
 
 function rotater() {
     if (rotated == true) {
